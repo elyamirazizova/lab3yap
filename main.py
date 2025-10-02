@@ -27,6 +27,22 @@ class Countdown:
         self.current -= 1
         return value
     
+print("Задание 4")
+    
 countdown = Countdown(5)
 for number in countdown:
-    print("Задание 4",number)
+    print(number)
+
+#задание 5
+def fibonacci(n):
+    a,b = 0,1
+    count = 0
+    while count < n:
+        yield a
+        a,b = b, a+b
+        count+=1
+
+print("задание 5")
+
+for num in fibonacci(5):
+    print(num)  
