@@ -127,3 +127,24 @@ print(f"Сегодняшняя дата: {today}")
 print(f"Дней прошло с рождения: {days_passed:,} дней")
 print(f"Следующий день рождения: {next_birthday}")
 print(f"Дней до следующего дня рождения: {days_until_next_birthday} дней")
+
+#задание 10
+
+from datetime import datetime
+
+def format_datetime(dt):
+    months = {
+        1: 'января', 2: 'февраля', 3: 'марта', 4: 'апреля',
+        5: 'мая', 6: 'июня', 7: 'июля', 8: 'августа',
+        9: 'сентября', 10: 'октября', 11: 'ноября', 12: 'декабря'
+    }
+    
+    formatted = f"Сегодня {dt.day} {months[dt.month]} {dt.year} года, время: {dt.hour:02d}:{dt.minute:02d}"
+    
+    return formatted
+
+print("задание 10")
+
+current_time = datetime.now()
+result = format_datetime(current_time)
+print(result)
