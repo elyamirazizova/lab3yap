@@ -102,3 +102,28 @@ print("задание 8")
 print(f"Дата и время: {now}")
 print(f"Только дата: {now.date()}")
 print(f"Только время: {now.time()}")
+
+#задание 9
+
+from datetime import datetime, date
+
+birthday = date(2006, 7, 26)  
+today = date.today()
+
+days_passed = (today - birthday).days
+
+next_birthday_this_year = date(today.year, 7, 26)
+
+if today > next_birthday_this_year:
+    next_birthday = date(today.year + 1, 7, 26)
+else:
+    next_birthday = next_birthday_this_year
+
+days_until_next_birthday = (next_birthday - today).days
+
+print("задание 9")
+print(f"Дата рождения: {birthday}")
+print(f"Сегодняшняя дата: {today}")
+print(f"Дней прошло с рождения: {days_passed:,} дней")
+print(f"Следующий день рождения: {next_birthday}")
+print(f"Дней до следующего дня рождения: {days_until_next_birthday} дней")
