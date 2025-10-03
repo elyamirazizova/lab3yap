@@ -90,3 +90,15 @@ print(f"{a} × {b} = {multiplication}")
 
 division = a / b
 print(f"{a} ÷ {b} = {division}")
+
+
+#задание 8
+
+from datetime import datetime
+
+now = datetime.now()
+
+print("задание 8")
+print(f"Дата и время: {now}")
+print(f"Только дата: {now.date()}")
+print(f"Только время: {now.time()}")
