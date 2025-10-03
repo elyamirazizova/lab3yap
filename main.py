@@ -46,3 +46,24 @@ print("задание 5")
 
 for num in fibonacci(5):
     print(num)  
+
+
+#задание 6
+def calculate_deposit():
+    P = float(input("Введите начальную сумму вклада (рубли.копейки): "))
+    r = float(input("Введите годовую процентную ставку (%): "))
+    t = float(input("Введите срок вклада (лет): "))
+    
+    # Расчет по формуле: S = P * (1 + r/(12*100))^(12*t)
+    monthly_rate = r / (12 * 100)
+    total_months = 12 * t
+    S = P * (1 + monthly_rate) ** total_months
+    
+    final_amount = round(S, 2)
+    profit = round(final_amount - P, 2)
+    
+    print("Задание 6")
+    print(f"Начальная сумма: {P:.2f} руб.")
+    print(f"Итоговая сумма: {final_amount:.2f} руб.")
+    print(f"Общая прибыль: {profit:.2f} руб.")
+calculate_deposit()
