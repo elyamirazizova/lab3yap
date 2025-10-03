@@ -51,6 +51,8 @@ for num in fibonacci(5):
 #задание 6
 from decimal import Decimal, ROUND_HALF_UP
 
+print("задание 6")
+
 def calculate_deposit_decimal():
     P = Decimal(input("Введите начальную сумму: "))
     r = Decimal(input("Введите годовую ставку (%): "))
@@ -64,10 +66,27 @@ def calculate_deposit_decimal():
     final_amount = S.quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
     profit = (final_amount - P).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP)
     
-    print("задание 6")
     print(f"Итоговая сумма: {final_amount} руб.")
     print(f"Прибыль: {profit} руб.")
 
 calculate_deposit_decimal()
 
 #задание 7
+from fractions import Fraction
+
+print("задание 7")
+
+a=Fraction(3,4)
+b=Fraction(5,6)
+
+addition = a+b
+print(f" {a} + {b} = {addition}")
+
+subtraction = a - b
+print(f"{a} - {b} = {subtraction}")
+
+multiplication = a * b
+print(f"{a} × {b} = {multiplication}")
+
+division = a / b
+print(f"{a} ÷ {b} = {division}")
